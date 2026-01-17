@@ -1,0 +1,263 @@
+#donationForm .btn-success {
+    background-color: #A2D63B;
+    border-color: #A2D63B;
+}
+
+#donationForm .btn-success:hover {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* our partners and collabration card css */
+/* Slider container */
+.partner-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.partner-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+}
+
+.partner-card {
+    width: 260px;
+    margin-right: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.partner-card img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+/* KEY ANIMATION */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.partner-slider:hover .partner-track {
+    animation-play-state: paused;
+}
+
+/* Mobile speed */
+@media (max-width: 768px) {
+    .partner-track {
+        animation-duration: 40s;
+    }
+}
+
+/* Slider */
+.blood-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Track */
+.blood-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: blood-marquee 30s linear infinite;
+    will-change: transform;
+}
+
+/* Card */
+.blood-card {
+    width: 260px;
+    margin-right: 20px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Image */
+.blood-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes blood-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.blood-slider:hover .blood-track {
+    animation-play-state: paused;
+}
+
+/* Mobile speed */
+@media (max-width: 768px) {
+    .blood-track {
+        animation-duration: 18s;
+    }
+}
+
+/* blood bank css */
+/* Slider */
+.blood-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Track */
+.blood-track {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: blood-marquee 30s linear infinite;
+    will-change: transform;
+}
+
+/* Card */
+.blood-card {
+    width: 260px;
+    margin-right: 20px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Image */
+.blood-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Animation */
+@keyframes blood-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.blood-slider:hover .blood-track {
+    animation-play-state: paused;
+}
+
+/* Mobile speed */
+@media (max-width: 768px) {
+    .blood-track {
+        animation-duration: 18s;
+    }
+}
+
+/* valunteer list */
+/* Volunteer box */
+.volunteer-box {
+    height: 300px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Track */
+.volunteer-track {
+    display: flex;
+    flex-direction: column;
+    animation: scroll-up 30s linear infinite;
+}
+
+/* Item */
+.volunteer-item {
+    padding: 10px;
+    text-align: center;
+    /* font-weight: 600; */
+    border-bottom: 1px solid #eee;
+}
+
+/* Animation */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* Pause on hover */
+.volunteer-box:hover .volunteer-track {
+    animation-play-state: paused;
+}
+
+/* Outer equal-height boxes */
+.section-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Fix extra horizontal spacing */
+.container-fluid {
+    max-width: 1400px;
+}
+
+/* BLOOD BANK SLIDER HEIGHT */
+.blood-slider {
+    height: 320px;
+    display: flex;
+    align-items: center;
+}
+
+/* VOLUNTEER LIST HEIGHT */
+.volunteer-box {
+    height: 320px;
+    overflow: hidden;
+}
+
+/* Center cards vertically */
+.blood-track {
+    align-items: center;
+}

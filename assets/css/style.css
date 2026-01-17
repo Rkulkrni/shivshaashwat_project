@@ -1,0 +1,285 @@
+.hero-section {
+    min-height: 40vh;
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+* {
+    font-family: 'Baloo 2', cursive !important;
+}
+
+.bg-logo-sf {
+    background-color: #50AA2E !important;
+}
+
+.text-logo-sf {
+    color: #50AA2E !important;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+}
+
+.navbar-height {
+    height: 15vh;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+}
+
+.navbar {
+    position: relative;
+    z-index: 1050 !important;
+    /* Higher than any section */
+}
+
+.navbar-brand span {
+    font-family: 'Baloo 2', cursive;
+    /* Logo-style Marathi font */
+    color: #5A3825;
+    /* Dark Brown from logo */
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #6c451e !important;
+    /* Dark Green from leaves */
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #252722 !important;
+    /* Light Green hover */
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #50AA2E;
+    border-color: #50AA2E;
+}
+
+.btn-success:hover,
+.btn-outline-success:hover {
+    background-color: #50AA2E;
+    border-color: #50AA2E;
+}
+
+/* Footer */
+footer {
+    color: #5A3825;
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Logo */
+.logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+    object-fit: cover;
+}
+
+/* Title */
+.title {
+    font-family: 'Baloo 2', cursive;
+    color: #5A3825;
+    font-size: 2.8rem;
+    white-space: nowrap;
+    text-shadow: 2px 2px 5px #4CAF50;
+}
+
+/* Navbar height fix */
+.navbar-height {
+    padding: 10px 0;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+
+    .navbar-brand-wrapper {
+        max-width: 70%;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+}
+
+/* Mobile navbar background when expanded */
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background-color: #f2f2f2;
+        /* light gray */
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* height: 50vh; */
+    }
+
+    .navbar-nav .nav-link {
+        color: #333;
+        font-weight: 600;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #e0e0e0;
+        border-radius: 8px;
+    }
+
+    /* Center items */
+    .navbar-nav {
+        align-items: center;
+    }
+}
+
+/* Partner logos hover effect */
+.row img {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Blood Bank logos */
+section img.rounded-circle {
+    border: 2px solid #4CAF50;
+    /* green border from logo */
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+}
+
+/* Dropdown button color to match NGO theme */
+.dropdown-toggle {
+    color: #5A3825;
+    /* dark brown text */
+    font-weight: 500;
+    border: none;
+}
+
+.dropdown-toggle:hover {
+    color: #252722 !important;
+}
+
+/* Dropdown menu items hover */
+.dropdown-item:hover {
+    background-color: #4CAF50;
+    color: #f7f8f6;
+}
+
+/* Remove extra padding/margin for nav-item dropdown */
+.navbar-nav .nav-item.dropdown {
+    margin-left: 4px;
+    /* small gap from previous item or toggle */
+}
+
+.navbar-nav .nav-link.dropdown-toggle {
+    padding-left: 0.5rem;
+    /* reduce left padding */
+    padding-right: 0.5rem;
+    /* reduce right padding */
+}
+
+
+/* Flashing Donate Button */
+.flash-btn {
+    background-color: #f7f8f6;
+    color: #5A3825;
+    /* dark brown text */
+    font-weight: bold;
+    border-radius: 5px;
+    /* border: none; */
+    transition: all 0.3s;
+    animation: flash 1s infinite;
+}
+
+.flash-btn:hover {
+    background-color: #4CAF50;
+    /* dark green on hover */
+    color: #ffffff;
+    animation: none;
+    /* stop flashing on hover for better UX */
+}
+
+/* Keyframes for flashing */
+@keyframes flash {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    25%,
+    75% {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+}
+
+/* Hide default Bootstrap arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+/* Custom arrow style */
+.custom-prev,
+.custom-next {
+    font-size: 2.5rem;
+    color: #A2D63B;
+    /* light green from logo */
+    padding: 10px 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 5;
+}
+
+/* Position */
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+/* our work page carousel */
+.carousel img {
+    height: 230px;
+    object-fit: cover;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
