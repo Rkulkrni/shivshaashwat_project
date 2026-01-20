@@ -26,3 +26,29 @@ function setLanguage(lang) {
 }
 
 loadLanguage(defaultLang);
+
+// contact page js.
+document.getElementById("contactForm")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
+
+    const whatsappNumber = "9511847484"; // NGO WhatsApp number
+
+    const whatsappMessage = `
+Hello Shivshaashwat Foundation,
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+    `;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank");
+});
+
