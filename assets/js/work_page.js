@@ -7,11 +7,15 @@ galleryData.forEach((item, index) => {
       <div class="card shadow-sm h-100">
         <div id="galleryCarousel${index}" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            ${item.images.map((img, i) => `
+            ${item.images
+              .map(
+                (img, i) => `
               <div class="carousel-item ${i === 0 ? "active" : ""}">
                 <img src="assets/images/gallery/${img}" class="d-block w-100" loading="lazy">
               </div>
-            `).join("")}
+            `,
+              )
+              .join("")}
           </div>
         </div>
         <div class="card-body text-center">
@@ -32,11 +36,15 @@ mediaData.forEach((item, index) => {
       <div class="card shadow-sm h-100">
         <div id="mediaCarousel${index}" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            ${item.images.map((img, i) => `
+            ${item.images
+              .map(
+                (img, i) => `
               <div class="carousel-item ${i === 0 ? "active" : ""}">
                 <img src="assets/images/media/${img}" class="d-block w-100" loading="lazy">
               </div>
-            `).join("")}
+            `,
+              )
+              .join("")}
           </div>
         </div>
         <div class="card-body text-center">
@@ -49,7 +57,7 @@ mediaData.forEach((item, index) => {
 
 const workContainer = document.getElementById("workCards");
 
-workData.forEach(item => {
+workData.forEach((item) => {
   workContainer.innerHTML += `
     <div class="col-md-4">
       <div class="card h-100 shadow-sm text-center">
@@ -63,10 +71,9 @@ workData.forEach(item => {
   `;
 });
 
-
 const activityContainer = document.getElementById("activityCards");
 
-activityData.forEach(item => {
+activityData.forEach((item) => {
   activityContainer.innerHTML += `
     <div class="col-md-6">
       <div class="p-4 border rounded h-100">
@@ -76,4 +83,3 @@ activityData.forEach(item => {
     </div>
   `;
 });
-
