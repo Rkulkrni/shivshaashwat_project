@@ -29,7 +29,6 @@
     </section>
 
     <!-- Contact Section -->
-    <h4 class="fw-bold mb-3 text-center py-5">Get in Touch</h4>
     <section class="py-5">
         <div class="container">
             <div class="row g-4">
@@ -37,6 +36,8 @@
                 <!-- Contact Details -->
                 <div class="col-lg-4">
                     <div class="p-4 shadow-sm rounded h-100 bg-white">
+                        <h4 class="fw-bold mb-3 text-logo-sf">Get in Touch</h4>
+
                         <p>
                             <strong>📍 Address</strong><br>
                             Shivshaashwat Foundation<br>
@@ -55,27 +56,35 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
-                <form id="contactForm" class="col-lg-4">
-                    <div class="mb-3">
-                        <label class="form-label">Full name</label>
-                        <input type="text" class="form-control" id="contactName" required>
-                    </div>
+                <!-- Contact Form (FIX ADDED HERE) -->
+                <div class="col-lg-4">
+                    <div class="p-4 shadow-sm rounded h-100 bg-white">
+                        <h4 class="fw-bold mb-3 text-logo-sf">Send Message</h4>
 
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
-                    </div>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
 
-                    <button type="submit" class="btn btn-success w-100">
-                        Send via WhatsApp
-                    </button>
-                </form>
+                            <div class="mb-3">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-success w-100">
+                                Send via WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
                 <!-- Google Map -->
                 <div class="col-lg-4">
-                    <div class="shadow-sm rounded h-100 bg-white">
-                        <iframe src="https://www.google.com/maps?q=Sangli%20Maharashtra&output=embed" width="100%"
-                            height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    <div class="shadow-sm rounded overflow-hidden h-100">
+                        <iframe src="https://www.google.com/maps?q=Sangli%20Maharashtra&output=embed"
+                            width="100%" height="100%" style="border:0;"
+                            allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -93,5 +102,4 @@
     <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
