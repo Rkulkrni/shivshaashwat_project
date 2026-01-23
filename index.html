@@ -4,9 +4,9 @@
 <head>
     <title>Shivshaswat Foundation</title>
     <div id="headInclude"></div>
-    <link rel="stylesheet" href="/assets/css/component.css">
+    <link rel="stylesheet" href="assets/css/component.css">
     <script>
-        fetch('/components/head.html')
+        fetch('components/head.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headInclude').innerHTML = data;
