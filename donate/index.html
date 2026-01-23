@@ -5,7 +5,7 @@
     <title>Donate | Shivshaswat Foundation</title>
     <div id="headInclude"></div>
     <script>
-        fetch('components/head.html')
+        fetch('/components/head.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headInclude').innerHTML = data;
@@ -20,7 +20,7 @@
     <!-- donation form -->
     <section class="py-5" id="donationSection">
         <div class="container">
-            <h2 class="fw-bold text-center text-logo-sf" data-key="donation_form_title">Make a Donation</h2>
+            <h2 class="fw-bold text-center text-logo-sf" data-key="donation_form_title"></h2>
             <div class="row justify-content-center">
                 <div class="col-md-6">
 
@@ -28,42 +28,40 @@
 
                         <!-- Name -->
                         <div class="mb-3">
-                            <label class="form-label" data-key="donation_form_fullName">Full Name</label>
+                            <label class="form-label" data-key="donation_form_fullName"></label>
                             <input type="text" class="form-control" data-key="donation_form_fullName" id="donorName"
                                 required>
                         </div>
 
                         <!-- Email -->
                         <div class="mb-3">
-                            <label class="form-label" data-key="donation_form_email">Email</label>
+                            <label class="form-label" data-key="donation_form_email"></label>
                             <input type="email" class="form-control" data-key="donation_form_email" id="donorEmail"
                                 required>
                         </div>
 
                         <!-- PAN -->
                         <div class="mb-3">
-                            <label class="form-label" data-key="donation_form_pan">PAN Number</label>
+                            <label class="form-label" data-key="donation_form_pan"></label>
                             <input type="text" class="form-control" id="donorPan" placeholder="ABCDE1234F"
                                 maxlength="10" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required>
                         </div>
 
                         <!-- Phone -->
                         <div class="mb-3">
-                            <label class="form-label" data-key="donation_form_phone">Phone</label>
+                            <label class="form-label" data-key="donation_form_phone"></label>
                             <input type="tel" class="form-control" id="donorPhone" pattern="[6-9]{1}[0-9]{9}"
                                 maxlength="10" required>
                         </div>
 
                         <!-- Amount -->
                         <div class="mb-3">
-                            <label class="form-label" data-key="donation_form_amount">Donation Amount (₹)</label>
+                            <label class="form-label" data-key="donation_form_amount"></label>
                             <input type="number" class="form-control" id="donationAmount" required>
                         </div>
 
                         <!-- Step 1 Button -->
-                        <button type="submit" class="btn btn-success btn-lg w-100" data-key="donation_form_pay">
-                            Proceed to Pay
-                        </button>
+                        <button type="submit" class="btn btn-success btn-lg w-100" data-key="donation_form_pay"></button>
                     </form>
 
                     <!-- STEP 2: UPI PAYMENT (Hidden initially) -->
@@ -76,18 +74,15 @@
                         </a>
 
                         <div class="my-3">
-                            <img src="assets/images/icons/QR Code Shivshaashwat.jpg" alt="Shivshaswat Foundation UPI QR"
+                            <img src="/assets/images/icons/QR Code Shivshaashwat.jpg" alt="Shivshaswat Foundation UPI QR"
                                 class="img-fluid" style="max-width:250px">
                         </div>
                         <p>
-                            UPI ID: <strong>shivshaswatfoundation@upi</strong>
+                            UPI ID: <strong>9890872344@axl</strong>
                         </p>
-                        <p class="text-muted small"> Donations are directly credited to Shivshaswat Foundation’s
-                            official bank account.</p>
+                        <p class="text-muted small" data-key="domation_message"></p>
 
-                        <button class="btn btn-outline-success mt-3 flash-btn" onclick="markPending()">
-                            After payment click here
-                        </button>
+                        <button class="btn btn-outline-success mt-3 flash-btn" onclick="markPending()" data-key="after_payment_btn"></button>
 
                         <!-- Pending Payment Modal -->
                         <div class="modal fade" id="pendingModal" tabindex="-1" aria-labelledby="pendingModalLabel"
@@ -98,12 +93,10 @@
                                         <h5 class="modal-title" id="pendingModalLabel">Payment Pending</h5>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Your payment is marked as <strong>Pending</strong>. Our team will verify your
-                                            payment and send WhatsApp confirmation once it is received.</p>
+                                        <p data-key="modal_body_1"></p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-success"
-                                            data-bs-dismiss="modal">OK</button>
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-key="ok"></button>
                                     </div>
                                 </div>
                             </div>
@@ -118,13 +111,13 @@
     <!-- Footer -->
     <div id="footer"></div>
 
-    <script src="./assets/js/donate.js"></script>
+    <script src="/assets/js/donate.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

@@ -21,7 +21,6 @@ function markPending() {
     document.getElementById("pendingModal"),
   );
   pendingModal.show();
-  setTimeout(() => pendingModal.hide(), 5000);
 }
 
 function doPost(e) {

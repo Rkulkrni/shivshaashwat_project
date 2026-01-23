@@ -1,16 +1,16 @@
 // Load Navbar & Footer
 const defaultLang = localStorage.getItem("lang") || "en";
 
-fetch("components/navbar.html")
+fetch("/components/navbar.html")
   .then((res) => res.text())
   .then((data) => (document.getElementById("navbar").innerHTML = data));
 
-fetch("components/footer.html")
+fetch("/components/footer.html")
   .then((res) => res.text())
   .then((data) => (document.getElementById("footer").innerHTML = data));
 
 function loadLanguage(lang) {
-  fetch(`data/${lang}.json`)
+  fetch(`/data/${lang}.json`)
     .then((res) => res.json())
     .then((data) => {
       document.querySelectorAll("[data-key]").forEach((el) => {
@@ -28,29 +28,22 @@ function setLanguage(lang) {
 loadLanguage(defaultLang);
 
 // contact page js.
-document.getElementById("contactForm")?.addEventListener("submit", function (e) {
+document
+  .getElementById("contactForm")
+  ?.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const name = document.getElementById("contactName").value.trim();
-    const email = document.getElementById("contactEmail").value.trim();
     const message = document.getElementById("contactMessage").value.trim();
 
-    const whatsappNumber = "9511847484"; // NGO WhatsApp number
+    const whatsappNumber = "9923013366"; // NGO WhatsApp number
 
-    const whatsappMessage = `
-Hello Shivshaashwat Foundation,
-
-Name: ${name}
-Email: ${email}
-
-Message:
-${message}
-    `;
-
+    const whatsappMessage = `Hello Shivshaashwat Foundation,
+    Name: ${name}
+    Message: ${message}`;
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
     window.open(whatsappURL, "_blank");
-});
+  });
 
 // Disable right click only in protected section
 document.querySelector(".protect-section")?.addEventListener("contextmenu", e => {

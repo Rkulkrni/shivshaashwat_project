@@ -80,7 +80,7 @@
   "add_1":"Shivshaashwat foundation",
   "add_2":"Sangli, Maharashtra – 416416",
   "phone":"Phone",
-  "num":"+91 9XXXXXXXXX",
+  "num":"+91 99230 13366",
   "email":"Email",
   "Send_message":"Send Message",
   "full_name":"Full name",
@@ -93,5 +93,9 @@
   "donation_form_phone": "Phone",
   "donation_form_pan": "PAN number",
   "donation_form_amount": "Donation amount (₹)",
-  "donation_form_pay": "Click to donate"
+  "donation_form_pay": "Click to donate",
+  "domation_message": " Donations are directly credited to Shivshaswat Foundation’s official bank account.",
+  "after_payment_btn":"After payment click here",
+  "modal_body_1":"Your payment is marked as PENDING. Our team will verify your payment and send WhatsApp confirmation once it is received.",
+  "ok":"OK"
 }

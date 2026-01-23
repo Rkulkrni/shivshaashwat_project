@@ -5,7 +5,7 @@
     <title>Contact Us | Shivshaashwat Foundation</title>
     <div id="headInclude"></div>
     <script>
-        fetch('components/head.html')
+        fetch('/components/head.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headInclude').innerHTML = data;
@@ -46,12 +46,12 @@
 
                         <p>
                             <strong data-key="phone">📞 Phone</strong><br>
-                            <span data-key="num">+91 9XXXXXXXXX</span>
+                            <span data-key="num">+91 99230 13366</span>
                         </p>
 
                         <p>
                             <strong data-key="email">📧 Email</strong><br>
-                            shivshaswatfoundation@gmail.com
+                            shivshaashwat@gmail.com
                         </p>
                     </div>
                 </div>
@@ -72,8 +72,7 @@
                                 <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-success w-100">
-                                Send via WhatsApp
+                            <button type="submit" class="btn btn-success w-100" data-key="send_via_whatsapp">
                             </button>
                         </form>
                     </div>
@@ -99,7 +98,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 </body>
 </html>

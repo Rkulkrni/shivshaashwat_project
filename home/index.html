@@ -4,9 +4,9 @@
 <head>
     <title>Shivshaswat Foundation</title>
     <div id="headInclude"></div>
-    <link rel="stylesheet" href="assets//css/component.css">
+    <link rel="stylesheet" href="/assets/css/component.css">
     <script>
-        fetch('components/head.html')
+        fetch('/components/head.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('headInclude').innerHTML = data;
@@ -15,14 +15,12 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
     <div id="navbar"></div>
-
     <!-- Collaborations & Partners Section -->
     <section class="py-5 bg-light overflow-hidden">
         <div class="container-fluid text-center mb-4">
-            <h2 class="fw-bold fs-3 text-logo-sf" data-key="partners_title"> Our Collaborations & Partners </h2>
+            <h2 class="fw-bold fs-3 text-logo-sf" data-key="partners_title"></h2>
         </div>
         <div class="partner-slider">
             <div class="partner-track" id="partnerTrack"></div>
@@ -32,76 +30,56 @@
     <!-- Hero Section -->
     <section class="hero-section bg-logo-sf text-white text-center d-flex align-items-center">
         <div class="container">
-            <h1 data-key="hero_title">Helping Hands for a Better Tomorrow</h1>
-            <p class="lead mt-3" data-key="hero_subtitle">
-                Shivshaswat Foundation works for education, health, and social welfare.
-            </p>
-            <a href="/contact.html" class="btn btn-outline-light btn-lg mt-4 me-3" data-key="hero_volunteer">
-                Become volunteer
-            </a>
-            <a href="/donate.html" class="btn btn-outline-light btn-lg flash-btn btn-lg mt-4 me-3"
-                data-key="nav_donate">
-                Donate Now
-            </a>
-            <a href="/contact.html" class="btn btn-outline-light btn-lg btn-lg mt-4" data-key="hero_member">
-                Become life member
-            </a>
+            <h1 data-key="hero_title"></h1>
+            <p class="lead mt-3" data-key="hero_subtitle"></p>
+            <a href="/contact" class="btn btn-outline-light btn-lg mt-4 me-3" data-key="hero_volunteer"></a>
+            <a href="/donate" class="btn btn-outline-light btn-lg flash-btn btn-lg mt-4 me-3" data-key="nav_donate"></a>
+            <a href="/contact" class="btn btn-outline-light btn-lg btn-lg mt-4" data-key="hero_member"></a>
         </div>
     </section>
 
     <!-- Blood Bank Volunteers Section -->
     <section class="py-5 bg-light">
         <div class="container-fluid px-4">
-
             <div class="row g-4 align-items-stretch">
-
                 <!-- BLOOD BANK -->
                 <div class="col-lg-8">
                     <div class="section-box h-100">
-                        <h3 class="fw-bold mb-4 text-center text-logo-sf" data-key="blood_bank_title">
-                            Blood Banks Associated
-                        </h3>
-
+                        <h3 class="fw-bold mb-4 text-center text-logo-sf" data-key="blood_bank_title"></h3>
                         <div class="blood-slider">
                             <div class="blood-track" id="bloodTrack"></div>
                         </div>
                     </div>
                 </div>
-
                 <!-- VOLUNTEERS -->
                 <div class="col-lg-4">
                     <div class="section-box h-100">
-                        <h3 class="fw-bold mb-4 text-center text-logo-sf" data-key="Our_volunteers">
-                            Our Volunteers
-                        </h3>
-
+                        <h3 class="fw-bold mb-4 text-center text-logo-sf" data-key="Our_volunteers"></h3>
                         <div class="volunteer-box">
                             <div class="volunteer-track" id="volunteerTrack"></div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </section>
 
     <!-- Our Mission -->
     <section class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold fs-3 text-logo-sf" data-key="mission_title">Our Mission</h2>
+            <h2 class="mb-4 fw-bold fs-3 text-logo-sf" data-key="mission_title"></h2>
             <div class="row">
                 <div class="col-md-4">
-                    <h5 data-key="mission_edu_title">Education</h5>
-                    <p data-key="mission_edu_subtitle">Helping children get access to quality education.</p>
+                    <h5 data-key="mission_edu_title"></h5>
+                    <p data-key="mission_edu_subtitle"></p>
                 </div>
                 <div class="col-md-4">
-                    <h5 data-key="mission_health_title">Health</h5>
-                    <p data-key="mission_health_subtitle">Supporting health initiatives for underprivileged people.</p>
+                    <h5 data-key="mission_health_title"></h5>
+                    <p data-key="mission_health_subtitle"></p>
                 </div>
                 <div class="col-md-4">
-                    <h5 data-key="mission_sw_title">Social Welfare</h5>
-                    <p data-key="mission_sw_subtitle">Empowering communities for a better future.</p>
+                    <h5 data-key="mission_sw_title"></h5>
+                    <p data-key="mission_sw_subtitle"></p>
                 </div>
             </div>
         </div>
@@ -114,14 +92,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
-    <script src="data/partners.js"></script>
-    <script src="data/bloodBanks.js"></script>
-    <script src="data/volunteers.js"></script>
-
-    <script src="assets/js/partners-slider.js"></script>
-
-
+    <script src="/assets/js/main.js"></script>
+    <script src="/data/partners.js"></script>
+    <script src="/data/bloodBanks.js"></script>
+    <script src="/data/volunteers.js"></script>
+    <script src="/assets/js/partners-slider.js"></script>
 </body>
-
 </html>
