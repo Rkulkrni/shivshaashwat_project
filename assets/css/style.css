@@ -314,3 +314,22 @@ section img.rounded-circle {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* 🔒 Certificate Protection */
+.protect-section img {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+/* Prevent drag */
+.protect-section {
+  -webkit-user-drag: none;
+}
+
+/* Watermark overlay */
+.protect-section .card {
+  position: relative;
+}
+
