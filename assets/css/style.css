@@ -283,3 +283,34 @@ section img.rounded-circle {
     border-top-left-radius: 0.375rem;
     border-top-right-radius: 0.375rem;
 }
+
+/* Team Cards */
+.team-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Image size control */
+.team-img {
+  height: 220px;
+  object-fit: contain;
+  background: #ebeced;
+  padding: 10px;
+  border: 1px solid #f8f9fa;
+  border-radius: 14px 14px 0 0;
+}
+
+/* Reduce padding */
+.team-card .card-body {
+  padding: 15px;
+}
+
+/* Text control */
+.team-card p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   /* limit lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

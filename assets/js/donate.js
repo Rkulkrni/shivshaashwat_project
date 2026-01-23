@@ -62,7 +62,7 @@ form.addEventListener("submit", function (e) {
 
   // Send data to Google Apps Script
   fetch(
-    "https://script.google.com/macros/s/AKfycbzxDttR9PhssMQW3qseyoJ_JQqSoydSt5hC9TuxvcjDX-2yYaC4_dXNucp2BqG0-HQ/exec",
+    "https://script.google.com/macros/s/AKfycbzD57D72J4DrKROTGB6hz3f0Md4-KQvBjOsSSmcxq67l15xwwi14ez4g9HugAjRpgo/exec",
     {
       method: "POST",
       body: JSON.stringify(donorData),
