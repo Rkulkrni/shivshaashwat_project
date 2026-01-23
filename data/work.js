@@ -14,9 +14,9 @@ const galleryData = [
 ];
 
 const mediaData = [
-  { title: "Blood Donation Coverage", images: ["new_1.jpeg", "new_1.jpeg"] },
-  { title: "12 Years Celebration", images: ["new_1.jpeg"] },
-  { title: "Social Work Recognition", images: ["new_1.jpeg"] },
+  { title: "Blood donation coverage", images: ["new_1.jpeg", "new_1.jpeg"] },
+  { title: "12 years celebration", images: ["new_1.jpeg"] },
+  { title: "Social work recognition", images: ["new_1.jpeg"] },
 ];
 
 const workData = [

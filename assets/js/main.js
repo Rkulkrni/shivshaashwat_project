@@ -52,3 +52,20 @@ ${message}
     window.open(whatsappURL, "_blank");
 });
 
+// Disable right click only in protected section
+document.querySelector(".protect-section")?.addEventListener("contextmenu", e => {
+  e.preventDefault();
+});
+
+// Screenshot / app switch blur
+document.addEventListener("visibilitychange", () => {
+  const section = document.querySelector(".protect-section");
+  if (!section) return;
+
+  if (document.hidden) {
+    section.style.filter = "blur(14px)";
+  } else {
+    section.style.filter = "blur(0)";
+  }
+});
+

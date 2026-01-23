@@ -63,7 +63,7 @@ workData.forEach((item) => {
       <div class="card h-100 shadow-sm text-center">
         <div class="card-body">
           <img src="assets/images/work/${item.img}" width="60" class="mb-3">
-          <h5 class="fw-bold">${item.title}</h5>
+          <h5 class="fw-bold" data-key="${item.title}"></h5>
           <p class="text-muted">${item.text}</p>
         </div>
       </div>
