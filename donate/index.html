@@ -8,7 +8,10 @@
         fetch('../components/head.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('headInclude').innerHTML = data;
+                const adjustedData = data.replace(/(src|href)=["'](?!http|#|\/)([^"']+)["']/g, (match, attr, path) => {
+                    return `${attr}="../${path}"`;
+                });
+                document.getElementById('headInclude').innerHTML = adjustedData;
             });
     </script>
 </head>
@@ -61,7 +64,8 @@
                         </div>
 
                         <!-- Step 1 Button -->
-                        <button type="submit" class="btn btn-success btn-lg w-100" data-key="donation_form_pay"></button>
+                        <button type="submit" class="btn btn-success btn-lg w-100"
+                            data-key="donation_form_pay"></button>
                     </form>
 
                     <!-- STEP 2: UPI PAYMENT (Hidden initially) -->
@@ -74,15 +78,16 @@
                         </a>
 
                         <div class="my-3">
-                            <img src="../assets/images/icons/QR Code Shivshaashwat.jpg" alt="Shivshaswat Foundation UPI QR"
-                                class="img-fluid" style="max-width:250px">
+                            <img src="../assets/images/icons/QR Code Shivshaashwat.jpg"
+                                alt="Shivshaswat Foundation UPI QR" class="img-fluid" style="max-width:250px">
                         </div>
                         <p>
                             UPI ID: <strong>9890872344@axl</strong>
                         </p>
                         <p class="text-muted small" data-key="domation_message"></p>
 
-                        <button class="btn btn-outline-success mt-3 flash-btn" onclick="markPending()" data-key="after_payment_btn"></button>
+                        <button class="btn btn-outline-success mt-3 flash-btn" onclick="markPending()"
+                            data-key="after_payment_btn"></button>
 
                         <!-- Pending Payment Modal -->
                         <div class="modal fade" id="pendingModal" tabindex="-1" aria-labelledby="pendingModalLabel"
@@ -96,7 +101,8 @@
                                         <p data-key="modal_body_1"></p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" data-key="ok"></button>
+                                        <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                                            data-key="ok"></button>
                                     </div>
                                 </div>
                             </div>

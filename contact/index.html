@@ -8,7 +8,10 @@
         fetch('../components/head.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('headInclude').innerHTML = data;
+                const adjustedData = data.replace(/(src|href)=["'](?!http|#|\/)([^"']+)["']/g, (match, attr, path) => {
+                    return `${attr}="../${path}"`;
+                });
+                document.getElementById('headInclude').innerHTML = adjustedData;
             });
     </script>
 </head>
@@ -81,9 +84,8 @@
                 <!-- Google Map -->
                 <div class="col-lg-4">
                     <div class="shadow-sm rounded overflow-hidden h-100">
-                        <iframe src="https://www.google.com/maps?q=Sangli%20Maharashtra&output=embed"
-                            width="100%" height="100%" style="border:0;"
-                            allowfullscreen="" loading="lazy">
+                        <iframe src="https://www.google.com/maps?q=Sangli%20Maharashtra&output=embed" width="100%"
+                            height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
                 </div>
@@ -101,4 +103,5 @@
     <script src="../assets/js/main.js"></script>
 
 </body>
+
 </html>
