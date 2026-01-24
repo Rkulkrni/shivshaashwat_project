@@ -12,22 +12,17 @@ const getBasePath = () => {
 
 const basePath = getBasePath();
 
-fetch(`${basePath}components/navbar.html`)
+const loadNavbar = fetch(`${basePath}components/navbar.html`)
   .then((res) => res.text())
   .then((data) => {
-    // dynamically adjust paths
     const adjustedData = data
         .replace(/(src|href)=["'](?!http|#|\/)([^"']+)["']/g, (match, attr, path) => {
-            // If path doesn't start with http, #, or /, prepend basePath
-            // and assume the path in file is relative to root (e.g. "assets/...")
-            // We want to skip paths that are already relative like "../" if we assume inputs are "pure" relative?
-            // Actually, best to standardise inputs to be "assets/..."
             return `${attr}="${basePath}${path}"`;
         });
     document.getElementById("navbar").innerHTML = adjustedData;
   });
 
-fetch(`${basePath}components/footer.html`)
+const loadFooter = fetch(`${basePath}components/footer.html`)
   .then((res) => res.text())
   .then((data) => {
      const adjustedData = data
@@ -53,7 +48,10 @@ function setLanguage(lang) {
   loadLanguage(lang);
 }
 
-loadLanguage(defaultLang);
+// Wait for components to load before setting language
+Promise.all([loadNavbar, loadFooter]).then(() => {
+  loadLanguage(defaultLang);
+});
 
 // contact page js.
 document
