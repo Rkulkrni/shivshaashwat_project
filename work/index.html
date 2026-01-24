@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="center">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Our Work | Shivshaswat Foundation</title>
+  <div id="headInclude"></div>
+  <script>
+    fetch('../components/head.html')
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to load head.html " + response.statusText);
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('headInclude').innerHTML = data;
+      })
+      .catch(err => console.error("Error loading head:", err));
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- 🔶 Page Header -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h1 class="fw-bold text-logo-sf" data-key="work_title"></h1>
+      <p class="text-muted mt-2" data-key="work_subtitle">
+        We work selflessly to serve humanity and build a better society
+      </p>
+    </div>
+  </section>
+
+  <!-- 🔶 12 Years of Service -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-logo-sf" data-key="12_yrs_service_title"></h2>
+        <p class="text-muted" data-key="12_yrs_service_desc"></p>
+      </div>
+      <div class="row g-4" id="galleryCards"></div>
+    </div>
+  </section>
+
+  <!-- 🔶 Media & Newspaper Appreciation -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-logo-sf" data-key="media_newspaper_title"></h2>
+        <p class="text-muted" data-key="media_newspaper_desc"></p>
+      </div>
+      <div class="row g-4" id="mediaCards"></div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4" id="workCards"></div>
+    </div>
+  </section>
+
+  <!-- 🔶 Impact Numbers -->
+  <section class="py-5 bg-logo-sf text-white">
+    <div class="container">
+      <div class="row text-center">
+
+        <div class="col-md-3 col-6 mb-3">
+          <h2 class="fw-bold" data-key="10"></h2>
+          <p data-key="blood_camps"></p>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+          <h2 class="fw-bold" data-key="40000"></h2>
+          <p data-key="blood_camps"></p>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+          <h2 class="fw-bold" data-key="100"></h2>
+          <p data-key="blood_camps"></p>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+          <h2 class="fw-bold" data-key="10"></h2>
+          <p data-key="partner_organizations"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔶 Ongoing Activities -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4 text-logo-sf" data-key="ongoing_activities"></h2>
+      <div class="row g-4" id="activityCards"></div>
+    </div>
+  </section>
+
+  <!-- 🔶 Call to Action -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h3 class="fw-bold mb-3 text-logo-sf" data-key="want_to_support"></h3>
+      <a href="../donate.html" class="btn btn-success btn-lg me-3">
+        Donate Now
+      </a>
+      <a href="../contact.html" class="btn btn-outline-success btn-lg">
+        Join as Volunteer
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../data/work.js"></script>
+  <script src="../assets/js/work_page.js"></script>
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
