@@ -1,16 +1,27 @@
 // Load Navbar & Footer
 const defaultLang = localStorage.getItem("lang") || "en";
 
-fetch("/components/navbar.html")
+// Determine base path for fetching components
+const getBasePath = () => {
+  const path = window.location.pathname;
+  if (path.includes('/about/') || path.includes('/contact/') || path.includes('/donate/') || path.includes('/work/')) {
+    return '../';
+  }
+  return './';
+};
+
+const basePath = getBasePath();
+
+fetch(`${basePath}components/navbar.html`)
   .then((res) => res.text())
   .then((data) => (document.getElementById("navbar").innerHTML = data));
 
-fetch("/components/footer.html")
+fetch(`${basePath}components/footer.html`)
   .then((res) => res.text())
   .then((data) => (document.getElementById("footer").innerHTML = data));
 
 function loadLanguage(lang) {
-  fetch(`/data/${lang}.json`)
+  fetch(`${basePath}data/${lang}.json`)
     .then((res) => res.json())
     .then((data) => {
       document.querySelectorAll("[data-key]").forEach((el) => {
