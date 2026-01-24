@@ -4,13 +4,18 @@
 <head>
     <title>Shivshaswat Foundation</title>
     <div id="headInclude"></div>
-    <link rel="stylesheet" href="assets//css/component.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/component.css">
     <script>
         fetch('components/head.html')
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) throw new Error("Failed to load head.html " + response.statusText);
+                return response.text();
+            })
             .then(data => {
                 document.getElementById('headInclude').innerHTML = data;
-            });
+            })
+            .catch(err => console.error("Error loading head:", err));
     </script>
 </head>
 
@@ -118,10 +123,7 @@
     <script src="data/partners.js"></script>
     <script src="data/bloodBanks.js"></script>
     <script src="data/volunteers.js"></script>
-
     <script src="assets/js/partners-slider.js"></script>
-
-
 </body>
 
 </html>
