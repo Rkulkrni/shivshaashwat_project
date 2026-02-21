@@ -1,0 +1,11 @@
+# Netlify redirects: clean URLs (about.html -> /about)
+# Use 200 to rewrite, not redirect (keeps URL as /about)
+
+/                /index.html   200
+/about           /about.html   200
+/work            /work.html    200
+/contact         /contact.html 200
+/donate          /donate.html  200
+
+# SPA-style fallback for 404 (optional - only if you use client-side routing for all)
+# /*    /index.html   200

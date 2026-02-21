@@ -1,0 +1,9 @@
+# Shivshaashwat Foundation - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your production domain)
+Sitemap: https://www.shivshaashwatfoundation.org/sitemap.xml
+
+# Disallow admin or private paths if you add any later
+# Disallow: /private/

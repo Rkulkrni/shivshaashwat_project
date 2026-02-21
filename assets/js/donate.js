@@ -51,6 +51,15 @@ const upiPayBtn = document.getElementById("upiPayBtn");
 form.addEventListener("submit", function (e) {
   e.preventDefault(); // stop page reload
 
+  const amountValue = document.getElementById("donationAmount").value;
+
+  // Basic validation to avoid invalid or zero/negative amounts
+  const amount = parseFloat(amountValue);
+  if (Number.isNaN(amount) || amount <= 0) {
+    alert("Please enter a valid donation amount.");
+    return;
+  }
+
   // Collect user data
   const donorData = {
     name: document.getElementById("donorName").value,
@@ -73,7 +82,9 @@ form.addEventListener("submit", function (e) {
       console.log("Saved:", data);
 
       // Generate UPI link dynamically
-      const upiUrl = `upi://pay?pa=shivshaswatfoundation@upi&pn=Shivshaswat Foundation&am=${donorData.amount}&cu=INR`;
+      const upiUrl = `upi://pay?pa=shivshaswatfoundation@upi&pn=${encodeURIComponent(
+        "Shivshaswat Foundation",
+      )}&am=${amount}&cu=INR`;
       upiPayBtn.href = upiUrl;
 
       // Show UPI section

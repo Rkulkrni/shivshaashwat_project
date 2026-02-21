@@ -1,0 +1,17 @@
+{
+  "name": "shivshaashwat-foundation",
+  "version": "1.0.0",
+  "description": "Shivshaashwat Foundation NGO website – static site",
+  "private": true,
+  "scripts": {
+    "minify:css": "npx clean-css-cli -o assets/css/style.min.css assets/css/style.css && npx clean-css-cli -o assets/css/component.min.css assets/css/component.css",
+    "minify:js": "npx terser assets/js/main.js -o assets/js/main.min.js -c -m && npx terser assets/js/partners-slider.js -o assets/js/partners-slider.min.js -c -m",
+    "build": "npm run minify:css && npm run minify:js",
+    "serve": "npx serve . -l 3000"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^10.6.0",
+    "terser": "^5.27.0",
+    "serve": "^14.2.2"
+  }
+}

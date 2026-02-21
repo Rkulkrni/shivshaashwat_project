@@ -14,7 +14,7 @@ function initWorkPage() {
                   .map(
                     (img, i) => `
                   <div class="carousel-item ${i === 0 ? "active" : ""}">
-                    <img src="assets/images/gallery/${img}" class="d-block w-100" loading="lazy">
+                    <img src="/assets/images/gallery/${img}" class="d-block w-100" loading="lazy">
                   </div>
                 `,
                   )
@@ -50,7 +50,7 @@ function initWorkPage() {
                   .map(
                     (img, i) => `
                   <div class="carousel-item ${i === 0 ? "active" : ""}">
-                    <img src="assets/images/media/${img}" class="d-block w-100" loading="lazy">
+                    <img src="/assets/images/media/${img}" class="d-block w-100" loading="lazy">
                   </div>
                 `,
                   )
@@ -70,7 +70,7 @@ function initWorkPage() {
   if (workContainer && window.workData) {
     workContainer.innerHTML = "";
     window.workData.forEach((item) => {
-      const imgTag = item.img ? `<img src="assets/images/gallery/${item.img}" width="60" class="mb-3">` : '';
+      const imgTag = item.img ? `<img src="/assets/images/gallery/${item.img}" width="60" class="mb-3" loading="lazy">` : '';
       workContainer.innerHTML += `
         <div class="col-md-4">
           <div class="card h-100 shadow-sm text-center">
